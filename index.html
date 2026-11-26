@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SYP INJECTOR — حقن DLL مشفّر، ملف واحد، يعمل على كل الأجهزة.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/x-icon" href="syp.ico">
+<title>SYP INJECTOR — ملف واحد. سيطرة كاملة.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="ambient ambient-one" aria-hidden="true"></div>
+<div class="ambient ambient-two" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="SYP INJECTOR">
+    <img src="syp.ico" alt="">
+    <span>SYP <b>INJECTOR</b></span>
+  </a>
+  <button class="menu" id="menu" aria-label="القائمة" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="links" id="links">
+    <a href="#top" class="active">الرئيسية</a>
+    <a href="#features">المزايا</a>
+    <a href="#flow">كيف يشتغل</a>
+    <a href="#security">الحماية</a>
+    <a href="#faq">الأسئلة</a>
+    <a href="https://discord.gg/eg76Ww329D" target="_blank" rel="noopener">الدعم</a>
+  </nav>
+  <a class="nav-cta" href="SypInjector.exe" download>
+    <span>تحميل</span><small>0.0.0.0.1</small>
+  </a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <div class="pill"><span class="pulse"></span> x64 · ONE FILE · ENCRYPTED</div>
+        <h1>SYP<br><span>INJECTOR</span></h1>
+        <p class="lead">حقن DLL سريع ونظيف. البايتلود مشفّر، الملف واحد، ويشتغل على أي جهاز بدون تثبيت.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="SypInjector.exe" download>
+            تحميل التنفيذي
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#flow">شوف كيف يشتغل</a>
+        </div>
+        <div class="chips">
+          <span>بدون مفتاح</span>
+          <span>صلاحية أدمن</span>
+          <span>AES-256-GCM</span>
+          <span>محمي بـ PyArmor</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="window">
+          <div class="window-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <span>SYP INJECTOR</span>
+            <small>0.0.0.0.1</small>
+          </div>
+          <div class="window-body">
+            <div class="mock-toolbar">
+              <input id="fakeSearch" type="text" placeholder="ابحث عن عملية..." aria-label="ابحث عن عملية">
+              <button id="fakeRefresh" type="button">REFRESH</button>
+            </div>
+            <div class="mock-list" id="fakeList">
+              <div class="proc"><span>RecRoom.exe</span><b>18420</b></div>
+              <div class="proc"><span>explorer.exe</span><b>3184</b></div>
+              <div class="proc"><span>chrome.exe</span><b>7216</b></div>
+              <div class="proc"><span>dwm.exe</span><b>1104</b></div>
+              <div class="proc"><span>notepad.exe</span><b>9528</b></div>
+            </div>
+            <div class="mock-controls">
+              <span>DELAY <b>2s</b></span>
+              <button id="fakeInject" type="button">INJECT</button>
+            </div>
+            <div class="mock-log" id="fakeLog">
+              <div><em>[00:00]</em> ready — select a process</div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-badge"><span></span> PAYLOAD EMBEDDED</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>ONE EXECUTABLE</span><i>◆</i><span>NO EXTRA FILES</span><i>◆</i><span>ENCRYPTED PAYLOAD</span><i>◆</i><span>X64 LOADLIBRARYW</span><i>◆</i><span>ADMIN READY</span><i>◆</i>
+      <span>ONE EXECUTABLE</span><i>◆</i><span>NO EXTRA FILES</span><i>◆</i><span>ENCRYPTED PAYLOAD</span><i>◆</i><span>X64 LOADLIBRARYW</span><i>◆</i><span>ADMIN READY</span><i>◆</i>
+    </div>
+  </div>
+
+  <section class="section" id="features">
+    <div class="section-head reveal">
+      <span class="eyebrow">01 / FEATURES</span>
+      <h2>كل شي تحت يدك</h2>
+      <p>واجهة سوداء هادية، وظائف حقيقية، وطبقة حماية ما تترك أثر على القرص.</p>
+    </div>
+    <div class="card-grid">
+      <article class="card reveal">
+        <div class="card-icon">01</div>
+        <h3>ملف واحد</h3>
+        <p>الأيقونة والـ DLL ومحرك الحقن مدفونين داخل <code>SypInjector.exe</code>. انسخ الملف لحاله واشغّله.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">02</div>
+        <h3>تشفير فعلي</h3>
+        <p>AES-256-GCM يغطّي البايتلود كامل، مع مفتاح مقطّع ومخفي داخل حارس ممرّر على PyArmor.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">03</div>
+        <h3>حقن x64</h3>
+        <p><code>LoadLibraryW</code> عبر خيط بعيد، مع فحص نوع العملية ونوع الـ DLL قبل أي كتابة في الذاكرة.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">04</div>
+        <h3>صلاحية أدمن</h3>
+        <p>يطلب Administrator عند الإقلاع، مع مسار احتياطي لرفع الصلاحية تلقائياً.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">05</div>
+        <h3>سجل حي</h3>
+        <p>كل خطوة تظهر في اللوج: تحديث العمليات، العد التنازلي، عنوان التحميل، ونتيجة الحقن.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">06</div>
+        <h3>تنظيف تلقائي</h3>
+        <p>الملف المفكّ يُكتب مخفياً في Temp ويُحذف فور انتهاء البايتلود. ما يبقى أثر.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="flow">
+    <div class="section-head reveal">
+      <span class="eyebrow">02 / HOW IT WORKS</span>
+      <h3>من الضغطة إلى الحقن</h3>
+      <p>أربع خطوات بسيطة في الواجهة، وهذا اللي يصير تحت الغطاء.</p>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="steps reveal">
+        <div class="step"><span>1</span><div><h4>شغّل الملف</h4><p>وافق على صلاحية Administrator.</p></div></div>
+        <div class="step"><span>2</span><div><h4>اختر العملية</h4><p>ابحث واختر هدف x64 من القائمة.</p></div></div>
+        <div class="step"><span>3</span><div><h4>اضبط التأخير</h4><p>ثانية أو ثانيتين كافية غالباً.</p></div></div>
+        <div class="step"><span>4</span><div><h4>اضغط INJECT</h4><p>اللوج يطلع نتيجة الحقن وعنوان التحميل.</p></div></div>
+      </div>
+
+      <div class="terminal reveal">
+        <div class="terminal-bar">
+          <span class="term-title">INJECTION FLOW</span>
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="api" type="button">Win32</button>
+            <button class="tab" data-tab="quick" type="button">QUICK</button>
+            <button class="tab" data-tab="output" type="button">LOG</button>
+          </div>
+        </div>
+        <div class="terminal-body">
+          <pre class="code active" data-panel="api">OpenProcess(PROCESS_ALL_ACCESS, FALSE, PID)
+VirtualAllocEx(hProcess, NULL, pathLength,
+               MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE)
+WriteProcessMemory(hProcess, remotePath,
+                   payloadPath, pathLength, NULL)
+GetProcAddress(GetModuleHandleW(L"kernel32.dll"),
+               "LoadLibraryW")
+CreateRemoteThread(hProcess, NULL, 0,
+                   LoadLibraryW, remotePath, 0, NULL)
+WaitForSingleObject(hThread, 10000)
+GetExitCodeThread(hThread, &amp;baseAddress)
+VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
+          <pre class="code" data-panel="quick">SypInjector.exe
+  → run as administrator
+  → select target process (x64)
+  → payload: embedded / overlay.dll
+  → delay: 2s
+  → press INJECT
+  → log: Injection successful — base 0x...</pre>
+          <pre class="code" data-panel="output">[12:04:11] process list refreshed (202 entries)
+[12:04:15] Rec Room detected
+[12:04:18] Injection started
+[12:04:20] 2 seconds before injection
+[12:04:22] Injection successful! — base 0x7FFA31C40000
+[12:04:22] Referee processes cleared</pre>
+        </div>
+        <button class="copy-btn" id="copyCode" type="button">نسخ الكود</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="security">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 / PROTECTION</span>
+      <h3>طبقات ما تنكسر بسهولة</h3>
+      <p>التشفير مو زينة. كل طبقة لها وظيفة، والبايتلود ما يظهر كنص داخل الملف.</p>
+    </div>
+    <div class="layers reveal">
+      <div class="layer"><b>AES-256-GCM</b><span>تشفير البايتلود كامل مع nonce عشوائي.</span></div>
+      <div class="layer"><b>PyArmor</b><span>كود الحارس والبايتلود مشوّش قبل الحزم.</span></div>
+      <div class="layer"><b>SPLIT KEY</b><span>المفتاح مقطّع، مخلوط XOR، وترتيبه معكوس.</span></div>
+      <div class="layer"><b>ANTI-DEBUG</b><span>فحص أدوات الفك والتنقيح قبل فك أي شي.</span></div>
+      <div class="layer"><b>TEMP WIPE</b><span>فك مؤقت مخفي، ثم حذف فور الإغلاق.</span></div>
+      <div class="layer"><b>PORTABLE</b><span>ما فيه ربط بالجهاز. يشتغل عند أي أحد.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-head reveal">
+      <span class="eyebrow">04 / QUESTIONS</span>
+      <h3>أسئلة مباشرة</h3>
+      <p>أكثر شي يسألون عنه، بجواب واضح.</p>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>هل يشتغل على أي جهاز؟ <span></span></summary>
+        <p>نعم. الملف محمول، ما يحتاجبايثون ولا مكتبات، وما فيه ربط بالجهاز. بس لازم Administrator عند التشغيل.</p>
+      </details>
+      <details>
+        <summary>هل يحتاج ملفات ثانية جنبه؟ <span></span></summary>
+        <p>لا. الأيقونة والـ DLL والبايتلود المشفّر كلهم داخل <code>SypInjector.exe</code>. انقل الملف لحاله.</p>
+      </details>
+      <details>
+        <summary>وش نوع التشفير بالضبط؟ <span></span></summary>
+        <p>AES-256-GCM فوق PyArmor. المفتاح ثابت ومخفي داخل حارس مشوّش، مو مخزن كنص عادي.</p>
+      </details>
+      <details>
+        <summary>كيف أعرف إن الحقن نجح؟ <span></span></summary>
+        <p>اللوج يطلع <code>Injection successful!</code> مع عنوان التحميل base. أي فشل يطلع سببه مباشرة.</p>
+      </details>
+      <details>
+        <summary>وش الفرق بينه وبين نسخة Rec Room القديمة؟ <span></span></summary>
+        <p>نفس الهدف، بس واجهة أحدث، ملف واحد، تشفير كامل، وتنظيف تلقائي بعد التشغيل.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta reveal">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <span class="eyebrow">READY TO RUN</span>
+    <h3>ملف واحد. بدون تثبيت.</h3>
+    <p>نزّل <code>SypInjector.exe</code>، وافق على الأدمن، وابدأ.</p>
+    <a class="btn btn-primary btn-big" href="SypInjector.exe" download>
+      تحميل SypInjector.exe
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14"/></svg>
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="syp.ico" alt=""><span>SYP INJECTOR</span></div>
+  <p>0.0.0.0.1 — أول نسخة مستقرة.</p>
+  <a href="https://discord.gg/eg76Ww329D" target="_blank" rel="noopener">https://discord.gg/eg76Ww329D</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
