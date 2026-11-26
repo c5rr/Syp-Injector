@@ -102,18 +102,18 @@
     <div class="section-head reveal">
       <span class="eyebrow">01 / FEATURES</span>
       <h2>كل شي تحت يدك</h2>
-      <p>واجهة سوداء هادية، وظائف حقيقية، وطبقة حماية ما تترك أثر على القرص.</p>
+      <p>واجهة سوداء هادية، وظائف مباشرة، وطبقة حماية تقلل الآثار على القرص.</p>
     </div>
     <div class="card-grid">
       <article class="card reveal">
         <div class="card-icon">01</div>
         <h3>ملف واحد</h3>
-        <p>الأيقونة والـ DLL ومحرك الحقن مدفونين داخل <code>SypInjector.exe</code>. انسخ الملف لحاله واشغّله.</p>
+        <p>الأيقونة والـ DLL ومحرك الحقن مدمجين داخل <code>SypInjector.exe</code>. انسخ الملف لحاله وشغّله.</p>
       </article>
       <article class="card reveal">
         <div class="card-icon">02</div>
         <h3>تشفير فعلي</h3>
-        <p>AES-256-GCM يغطّي البايتلود كامل، مع مفتاح مقطّع ومخفي داخل حارس ممرّر على PyArmor.</p>
+        <p>AES-256-GCM يغطّي البايتلود كامل، مع مفتاح مقسّم ومخفي داخل طبقة محمية بـ PyArmor.</p>
       </article>
       <article class="card reveal">
         <div class="card-icon">03</div>
@@ -133,7 +133,7 @@
       <article class="card reveal">
         <div class="card-icon">06</div>
         <h3>تنظيف تلقائي</h3>
-        <p>الملف المفكّ يُكتب مخفياً في Temp ويُحذف فور انتهاء البايتلود. ما يبقى أثر.</p>
+        <p>الملف المؤقت يُحذف فور انتهاء البايتلود لتقليل بقايا التشغيل.</p>
       </article>
     </div>
   </section>
@@ -197,14 +197,14 @@ VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
   <section class="section" id="security">
     <div class="section-head reveal">
       <span class="eyebrow">03 / PROTECTION</span>
-      <h3>طبقات ما تنكسر بسهولة</h3>
-      <p>التشفير مو زينة. كل طبقة لها وظيفة، والبايتلود ما يظهر كنص داخل الملف.</p>
+      <h3>طبقات حماية متعددة</h3>
+      <p>التشفير مو زينة. كل طبقة لها وظيفة، والبايتلود ما يظهر كنص عادي داخل الملف.</p>
     </div>
     <div class="layers reveal">
       <div class="layer"><b>AES-256-GCM</b><span>تشفير البايتلود كامل مع nonce عشوائي.</span></div>
-      <div class="layer"><b>PyArmor</b><span>كود الحارس والبايتلود مشوّش قبل الحزم.</span></div>
-      <div class="layer"><b>SPLIT KEY</b><span>المفتاح مقطّع، مخلوط XOR، وترتيبه معكوس.</span></div>
-      <div class="layer"><b>ANTI-DEBUG</b><span>فحص أدوات الفك والتنقيح قبل فك أي شي.</span></div>
+      <div class="layer"><b>PyArmor</b><span>تشويش الكود قبل الحزم.</span></div>
+      <div class="layer"><b>SPLIT KEY</b><span>المفتاح مقسّم، مخلوط XOR، وترتيبه معكوس.</span></div>
+      <div class="layer"><b>ANTI-DEBUG</b><span>تحقق من بيئة التشغيل قبل فك التشفير.</span></div>
       <div class="layer"><b>TEMP WIPE</b><span>فك مؤقت مخفي، ثم حذف فور الإغلاق.</span></div>
       <div class="layer"><b>PORTABLE</b><span>ما فيه ربط بالجهاز. يشتغل عند أي أحد.</span></div>
     </div>
@@ -213,29 +213,25 @@ VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
   <section class="section" id="faq">
     <div class="section-head reveal">
       <span class="eyebrow">04 / QUESTIONS</span>
-      <h3>أسئلة مباشرة</h3>
-      <p>أكثر شي يسألون عنه، بجواب واضح.</p>
+      <h3>كيف يشتغل والأسئلة الشائعة</h3>
+      <p>طريقة الاستخدام وأهم النقاط باختصار.</p>
     </div>
     <div class="faq reveal">
       <details open>
+        <summary>كيف يشتغل؟ <span></span></summary>
+        <p>تشغّل <code>SypInjector.exe</code> كمسؤول، تختار العملية المستهدفة، تحدد وقت التأخير، وتضغط <code>INJECT</code> ليتم الحقن عبر <code>LoadLibraryW</code>.</p>
+      </details>
+      <details>
+        <summary>كيف أعرف إن الحقن نجح؟ <span></span></summary>
+        <p>اللوج يطلع <code>Injection successful!</code> مع عنوان التحميل base. وفي حال حدوث خطأ يظهر السبب مباشرة.</p>
+      </details>
+      <details>
         <summary>هل يشتغل على أي جهاز؟ <span></span></summary>
-        <p>نعم. الملف محمول، ما يحتاجبايثون ولا مكتبات، وما فيه ربط بالجهاز. بس لازم Administrator عند التشغيل.</p>
+        <p>نعم. الملف محمول، ما يحتاج بايثون ولا مكتبات إضافية، وما فيه ربط بالجهاز. فقط شغّله بصلاحية Administrator.</p>
       </details>
       <details>
         <summary>هل يحتاج ملفات ثانية جنبه؟ <span></span></summary>
         <p>لا. الأيقونة والـ DLL والبايتلود المشفّر كلهم داخل <code>SypInjector.exe</code>. انقل الملف لحاله.</p>
-      </details>
-      <details>
-        <summary>وش نوع التشفير بالضبط؟ <span></span></summary>
-        <p>AES-256-GCM فوق PyArmor. المفتاح ثابت ومخفي داخل حارس مشوّش، مو مخزن كنص عادي.</p>
-      </details>
-      <details>
-        <summary>كيف أعرف إن الحقن نجح؟ <span></span></summary>
-        <p>اللوج يطلع <code>Injection successful!</code> مع عنوان التحميل base. أي فشل يطلع سببه مباشرة.</p>
-      </details>
-      <details>
-        <summary>وش الفرق بينه وبين نسخة Rec Room القديمة؟ <span></span></summary>
-        <p>نفس الهدف، بس واجهة أحدث، ملف واحد، تشفير كامل، وتنظيف تلقائي بعد التشغيل.</p>
       </details>
     </div>
   </section>
@@ -245,7 +241,7 @@ VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
     <span class="eyebrow">READY TO RUN</span>
     <h3>ملف واحد. بدون تثبيت.</h3>
     <p>نزّل <code>SypInjector.exe</code>، وافق على الأدمن، وابدأ.</p>
-    <a class="btn btn-primary btn-big" href="SypInjector.exe" download>
+    <a class="btn btn-primary btn-big" href="https://github.com/c5rr/Syp-Injector/releases/download/injctore/SypInjector.exe" download>
       تحميل SypInjector.exe
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14"/></svg>
     </a>
