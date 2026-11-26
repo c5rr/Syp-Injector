@@ -101,27 +101,22 @@
   <section class="section" id="features">
     <div class="card-grid">
       <article class="card reveal">
-        <div class="card-icon">01</div>
-        <h3>ملف واحد</h3>
-        <p>الأيقونة والـ DLL ومحرك الحقن مدمجين داخل <code>SypInjector.exe</code>. انسخ الملف لحاله وشغّله.</p>
-      </article>
-      <article class="card reveal">
-        <div class="card-icon">03</div>
+        <div class="card-icon">02</div>
         <h3>حقن x64</h3>
         <p><code>LoadLibraryW</code> عبر خيط بعيد، مع فحص نوع العملية ونوع الـ DLL قبل أي كتابة في الذاكرة.</p>
       </article>
       <article class="card reveal">
-        <div class="card-icon">04</div>
+        <div class="card-icon">03</div>
         <h3>صلاحية أدمن</h3>
         <p>يطلب Administrator عند الإقلاع، مع مسار احتياطي لرفع الصلاحية تلقائياً.</p>
       </article>
       <article class="card reveal">
-        <div class="card-icon">05</div>
+        <div class="card-icon">04</div>
         <h3>سجل حي</h3>
-        <p>كل خطوة تظهر في اللوج: تحديث العمليات، العد التنازلي، عنوان التحميل، ونتيجة الحقن.</p>
+        <p>كل خطوة تظهر في اللوق: تحديث العمليات، العد التنازلي، عنوان التحميل، ونتيجة الحقن.</p>
       </article>
       <article class="card reveal">
-        <div class="card-icon">06</div>
+        <div class="card-icon">05</div>
         <h3>تنظيف تلقائي</h3>
         <p>الملف المؤقت يُحذف فور انتهاء البايلود لتقليل بقايا التشغيل.</p>
       </article>
@@ -132,7 +127,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">02 / HOW IT WORKS</span>
       <h3>من الضغطة إلى الحقن</h3>
-      <p>أربع خطوات بسيطة في الواجهة، وهذا اللي يصير تحت الغطاء.</p>
+      <p>أربع خطوات بسيطة في الواجهة، وهذا اللي يصير .</p>
     </div>
 
     <div class="flow-wrap">
@@ -140,7 +135,7 @@
         <div class="step"><span>1</span><div><h4>شغّل الملف</h4><p>وافق على صلاحية Administrator.</p></div></div>
         <div class="step"><span>2</span><div><h4>اختر العملية</h4><p>ابحث واختر هدف x64 من القائمة.</p></div></div>
         <div class="step"><span>3</span><div><h4>اضبط التأخير</h4><p>ثانية أو ثانيتين كافية غالباً.</p></div></div>
-        <div class="step"><span>4</span><div><h4>اضغط INJECT</h4><p>اللوج يطلع نتيجة الحقن وعنوان التحميل.</p></div></div>
+        <div class="step"><span>4</span><div><h4>اضغط INJECT</h4><p>اللوق يطلع نتيجة الحقن وعنوان التحميل.</p></div></div>
       </div>
 
       <div class="terminal reveal">
@@ -211,11 +206,7 @@ VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
       </details>
       <details>
         <summary>كيف أعرف إن الحقن نجح؟ <span></span></summary>
-        <p>اللوج يطلع <code>Injection successful!</code> مع عنوان التحميل base. وفي حال حدوث خطأ يظهر السبب مباشرة.</p>
-      </details>
-      <details>
-        <summary>هل يشتغل على أي جهاز؟ <span></span></summary>
-        <p>نعم. الملف محمول، ما يحتاج بايثون ولا مكتبات إضافية، وما فيه ربط بالجهاز. فقط شغّله بصلاحية Administrator.</p>
+        <p>اللوق يطلع <code>Injection successful!</code> مع عنوان التحميل base. وفي حال حدوث خطأ يظهر السبب مباشرة.</p>
       </details>
       <details>
         <summary>هل يحتاج ملفات ثانية جنبه؟ <span></span></summary>
