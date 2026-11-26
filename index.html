@@ -99,21 +99,11 @@
   </div>
 
   <section class="section" id="features">
-    <div class="section-head reveal">
-      <span class="eyebrow">01 / FEATURES</span>
-      <h2>كل شي تحت يدك</h2>
-      <p>واجهة سوداء هادية، وظائف مباشرة، وطبقة حماية تقلل الآثار على القرص.</p>
-    </div>
     <div class="card-grid">
       <article class="card reveal">
         <div class="card-icon">01</div>
         <h3>ملف واحد</h3>
         <p>الأيقونة والـ DLL ومحرك الحقن مدمجين داخل <code>SypInjector.exe</code>. انسخ الملف لحاله وشغّله.</p>
-      </article>
-      <article class="card reveal">
-        <div class="card-icon">02</div>
-        <h3>تشفير فعلي</h3>
-        <p>AES-256-GCM يغطّي البايتلود كامل، مع مفتاح مقسّم ومخفي داخل طبقة محمية بـ PyArmor.</p>
       </article>
       <article class="card reveal">
         <div class="card-icon">03</div>
@@ -133,7 +123,7 @@
       <article class="card reveal">
         <div class="card-icon">06</div>
         <h3>تنظيف تلقائي</h3>
-        <p>الملف المؤقت يُحذف فور انتهاء البايتلود لتقليل بقايا التشغيل.</p>
+        <p>الملف المؤقت يُحذف فور انتهاء البايلود لتقليل بقايا التشغيل.</p>
       </article>
     </div>
   </section>
@@ -198,12 +188,10 @@ VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
     <div class="section-head reveal">
       <span class="eyebrow">03 / PROTECTION</span>
       <h3>طبقات حماية متعددة</h3>
-      <p>التشفير مو زينة. كل طبقة لها وظيفة، والبايتلود ما يظهر كنص عادي داخل الملف.</p>
+      <p>التشفير .</p>
     </div>
     <div class="layers reveal">
-      <div class="layer"><b>AES-256-GCM</b><span>تشفير البايتلود كامل مع nonce عشوائي.</span></div>
-      <div class="layer"><b>PyArmor</b><span>تشويش الكود قبل الحزم.</span></div>
-      <div class="layer"><b>SPLIT KEY</b><span>المفتاح مقسّم، مخلوط XOR، وترتيبه معكوس.</span></div>
+      <div class="layer"><b>AES-256-GCM</b><span>تشفير البايلود كامل مع nonce عشوائي.</span></div>
       <div class="layer"><b>ANTI-DEBUG</b><span>تحقق من بيئة التشغيل قبل فك التشفير.</span></div>
       <div class="layer"><b>TEMP WIPE</b><span>فك مؤقت مخفي، ثم حذف فور الإغلاق.</span></div>
       <div class="layer"><b>PORTABLE</b><span>ما فيه ربط بالجهاز. يشتغل عند أي أحد.</span></div>
@@ -239,7 +227,7 @@ VirtualFreeEx(hProcess, remotePath, 0, MEM_RELEASE)</pre>
   <section class="cta reveal">
     <div class="cta-glow" aria-hidden="true"></div>
     <span class="eyebrow">READY TO RUN</span>
-    <h3>ملف واحد. بدون تثبيت.</h3>
+    <h3>ملف واحد .</h3>
     <p>نزّل <code>SypInjector.exe</code>، وافق على الأدمن، وابدأ.</p>
     <a class="btn btn-primary btn-big" href="https://github.com/c5rr/Syp-Injector/releases/download/injctore/SypInjector.exe" download>
       تحميل SypInjector.exe
